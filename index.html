@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPIC Earth Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Earth as Seen from Space</h1>
+        <p>A daily view of our planet from the DSCOVR satellite.</p>
+    </header>
+
+    <main>
+        <section class="controls">
+            <label for="date-picker">Select a Date:</label>
+            <input type="date" id="date-picker" name="date-picker">
+            <button id="view-button">View Image</button>
+        </section>
+
+        <section class="image-container">
+            <img id="epic-image" src="" alt="Image of Earth">
+            <div id="loading-spinner" class="hidden"></div>
+        </section>
+
+        <section class="metadata-container">
+            <h2 id="image-title"></h2>
+            <p id="image-date"></p>
+            <p id="caption"></p>
+            <div class="meta-details">
+                <p><strong>Coordinates:</strong> <span id="coordinates"></span></p>
+                <p><strong>Satellite Position:</strong> <span id="sat-position"></span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Data provided by NASA's EPIC API</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
